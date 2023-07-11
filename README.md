@@ -1,70 +1,27 @@
-# Getting Started with Create React App
+# Getting Started with Create React Tic-Tac-Toe game
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with a tutorial [Create React App](https://react.dev/learn/tutorial-tic-tac-toe).
+Open [http://localhost:3000](http://localhost:3000) 
 
 ## Available Scripts
 
-In the project directory, you can run:
+The created functions are capable of being exported and consecutively modularized. This practice is a good way to make the code oranized and optimized.
+The main function of this problem is the Board(), responsible for building all the dynamism of the game. Orchestrating play orders and states, the function is responsible for building the logic and rules of the game. For example, who wins and who is next instead of playing..
+The generated module is a function that corresponds to the clickable component, natively called Button. The denotation of the Square() function considered a component in another file to facilitate use and future changes. In this function are passed two props, content value inside the button and the coordinates where they were clicked.      
 
-### `npm start`
+### Board()
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Functions are initialized with state constants to see which player, "x" or "o". The states of each 'square' is loaded into an array. The coordinates of each element are the position coordinates in the array. I use this coordinate to know if there is a move already made in the square. 
+Internally a function that calculates if there is a winner to check the positions that give the victory. If they are corresponding the game takes place. 
+The return of the function in React is the assembly of the appearance in grid.    
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Square()
 
-### `npm test`
+ The functions receive as parameters the value and the coordinate where it was clicked. The main function is to take these two props and do the manipulation. The Button is imported from the MUI library. 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+**Note: this is a one-way operation.**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
 ## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
